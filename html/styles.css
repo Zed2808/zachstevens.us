@@ -1,0 +1,8 @@
+@font-face {
+	font-family: 'DroidSans';
+	src: url('/fonts/DroidSans.ttf');
+}
+
+html {
+	font-family: 'DroidSans';
+}
