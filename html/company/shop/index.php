@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>DB Query Test</title>
+	<title>Shop</title>
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
