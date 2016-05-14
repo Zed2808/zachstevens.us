@@ -8,7 +8,7 @@ $dbname = "company";
 $conn = mysqli_connect($servername, $username, $password);
 
 if(!$conn) {
-	exit('<p>Connect to MySQL database server failed: </p>' . mysqli_connect_error());
+	exit('<p>Connection to MySQL database server failed: </p>' . mysqli_connect_error());
 }
 
 // Select database

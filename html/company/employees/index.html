@@ -5,48 +5,7 @@
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 </head>
 <body>
-	<script language="javascript" type="text/javascript">
-
-	// Browser support code
-	function getEmployee() {
-		var ajaxRequest;
-
-		try {
-			// Opera 8.0+, Firefox, Safari
-			ajaxRequest = new XMLHttpRequest();
-		} catch(e) {
-			// Internet Explorer
-			try {
-				ajaxRequest = new ActiveXObject("Msxm12.XMLHTTP");
-			} catch(e) {
-				try {
-					ajaxRequest = new ActiveXObject("Microsoft.XMLHTTP");
-				} catch (e) {
-					// Something went wrong
-					alert("Your browser is not supported.");
-					return false;
-				}
-			}
-		}
-
-		// Create function that will receive data sent from the server and
-		// will update div section on the same page
-		ajaxRequest.onreadystatechange = function() {
-			if(ajaxRequest.readyState == 4) {
-				var ajaxDisplay = document.getElementById('employeeTable');
-				ajaxDisplay.innerHTML = ajaxRequest.responseText;
-			}
-		}
-
-		// Now get the value from user and pass it to server script
-		var username = document.getElementById('username').value;
-		var password = document.getElementById('password').value;
-		var queryString = "?username=" + username + "&password=" + password;
-
-		ajaxRequest.open("GET", "ajax.php" + queryString, true);
-		ajaxRequest.send(null);
-	}
-	</script>
+	<script type="text/javascript" src="scripts.js"></script>
 
 	<a href="/index.html">Home</a>
 
@@ -54,20 +13,18 @@
 
 	<form name="loginForm">
 		<table>
-		<tr>
-		<td>Username:</td><td><input type="text" id="username"/></td>
-		</tr>
-		<tr>
-		<td>Password:</td><td><input type="password" id="password"/></td>
-		</tr>
+			<tr>
+			<td>Username:</td><td><input type="text" id="username"/></td>
+			</tr>
+			<tr>
+			<td>Password:</td><td><input type="password" id="password"/></td>
+			</tr>
 		</table>
 
 		<br />
 		<input type="button" onclick="getEmployee()" value="View record"/>
+		<a href="newemployee.html">Add new employee</a>
 	</form>
-
-	<br />
-	<a href="newuser.php">New user</a>
 
 	<br />
 	<div id="employeeTable"></div>

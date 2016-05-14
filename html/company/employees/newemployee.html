@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New user</title>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+	<script type="text/javascript" src="scripts.js"></script>
+
+	<a href="/index.html">Home</a>
+	<a href="index.html">Employee records</a>
+
+	<h1>Add a new employee</h1>
+
+	<form name="newEmployeeForm">
+		<table>
+			<tr>
+			<td>First name:</td><td><input type="text" id="firstname"/></td>
+			</tr>
+			<tr>
+			<td>Last name:</td><td><input type="text" id="lastname"/></td>
+			</tr>
+			<tr>
+			<td>Password:</td><td><input type="password" id="password"/></td>
+			</tr>
+		</table>
+
+		<br />
+		<input type="button" onclick="newEmployee()" value="Add new employee"/>
+	</form>
+
+	<br />
+	<div id="newEmployeeResult"></div>
+</body>
+</html>
