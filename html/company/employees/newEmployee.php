@@ -19,10 +19,11 @@ $username = $_GET['username'];
 $password = $_GET['password'];
 $firstname = $_GET['firstname'];
 $lastname = $_GET['lastname'];
+$salary = $_GET['salary'];
 $email = $_GET['email'];
 
 // Build query
-$query = "INSERT INTO employees (username, password, firstname, lastname, email) VALUES ('$username', MD5('$password'), '$firstname', '$lastname', '$email')";
+$query = "INSERT INTO employees (username, password, firstname, lastname, salary, email) VALUES ('$username', MD5('$password'), '$firstname', '$lastname', '$salary', '$email')";
 
 // Execute query
 if($result = mysqli_query($conn, $query)) {

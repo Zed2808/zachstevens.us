@@ -68,10 +68,12 @@ function newEmployee() {
 	var firstname = document.getElementById('firstname').value;
 	var lastname = document.getElementById('lastname').value;
 	var password = document.getElementById('password').value;
+	var salary = document.getElementById('salary').value;
 	var queryString = "?firstname=" + firstname;
 	queryString += "&lastname=" + lastname;
 	queryString += "&username=" + firstname + lastname;
 	queryString += "&password=" + password;
+	queryString += "&salary=" + salary;
 	queryString += "&email=" + firstname.toLowerCase() + lastname.toLowerCase() + "@example.com";
 
 	ajaxRequest.open("GET", "newEmployee.php" + queryString, true);
