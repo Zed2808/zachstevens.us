@@ -25,7 +25,7 @@
 	}
 
 	// Select the 'shop' DB
-	mysqli_select_db($conn, "shop");
+	mysqli_select_db($conn, "company");
 
 	// Our MySQL query
 	$sql = "SELECT * FROM shop";
