@@ -60,5 +60,8 @@
 
 	mysqli_close($conn);
 	?>
+
+	<br />
+	<a href="/company/employees/newemployee.html">Add new employee</a>
 </body>
 </html>
