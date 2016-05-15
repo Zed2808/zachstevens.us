@@ -4,7 +4,7 @@
 	<title>Shop</title>
 	<link rel="stylesheet" type="text/css" href="/styles.css">
 	<script type="text/javascript" src="/jquery/jquery-2.2.3.min.js"></script>
-	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="/js/scripts.js"></script>
 </head>
 <body>
 	<a href="/index.html">Home</a>
