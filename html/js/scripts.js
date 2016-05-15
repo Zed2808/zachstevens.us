@@ -22,3 +22,7 @@ function newEmployee() {
 	var email = username + "@example.com";
 	$("#newEmployeeResult").load("/php/newEmployee.php", {"firstname":firstname, "lastname":lastname, "username":username, "password":password, "salary":salary, "email":email} );
 }
+
+function sortEmployees(column, order) {
+	$("#employeeTable").load("/php/sortEmployees.php", {"column":column, "order":order} );
+}
