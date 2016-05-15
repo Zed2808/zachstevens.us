@@ -5,18 +5,15 @@ $password = "YayWebuser16!";
 $dbname = "company";
 
 // Connect to MySQL server
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if (!$conn) {
 	exit('<p>Connection to MySQL database server failed: </p>' . mysqli_connect_error());
 }
 
-// Select database
-mysqli_select_db($conn, $dbname);
-
 // Retrieve data from query string
-$id = $_GET['id'];
-$amount = $_GET['amount'];
+$id = $_REQUEST['id'];
+$amount = $_REQUEST['amount'];
 
 // Build and execute stock update query
 $query = "UPDATE shop SET stock = GREATEST(0, stock + $amount) WHERE id = $id";

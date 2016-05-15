@@ -3,10 +3,10 @@
 <head>
 	<title>Shop</title>
 	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<script type="text/javascript" src="/jquery/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
-	<script type="text/javascript" src="scripts.js"></script>
-
 	<a href="/index.html">Home</a>
 
 	<h1>Shop</h1>
@@ -16,16 +16,14 @@
 	$servername = "localhost";
 	$username = "webuser";
 	$password = "YayWebuser16!";
+	$dbname = "company";
 
 	// Connect to MySQL server
-	$conn = mysqli_connect($servername, $username, $password);
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 	if (!$conn) {
 		exit('<p>Connection to MySQL database server failed: </p>' . mysqli_connect_error());
 	}
-
-	// Select the 'shop' DB
-	mysqli_select_db($conn, "company");
 
 	// Our MySQL query
 	$sql = "SELECT * FROM shop";
@@ -78,9 +76,9 @@
 	<br />
 	<form name="inputForm">
 		Max stock available: <input type="text" id="stockInput"/>
-		<input type="button" onclick="getStockLessThanOrEqual()" value="Query MySQL"/>
+		<input type="button" onclick="getMaxStock()" value="Query MySQL"/>
 	</form>
 
-	<div id="ajaxDiv"></div>
+	<div id="maxStockDiv"></div>
 </body>
 </html>

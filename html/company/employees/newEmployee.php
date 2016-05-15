@@ -5,22 +5,19 @@ $password = "YayWebuser16!";
 $dbname = "company";
 
 // Connect to MySQL server
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(!$conn) {
 	exit('<p>Connection to MySQL database server failed: </p>' . mysqli_connect_error());
 }
 
-// Select database
-mysqli_select_db($conn, $dbname);
-
 // Retrieve data from query string
-$username = $_GET['username'];
-$password = $_GET['password'];
-$firstname = $_GET['firstname'];
-$lastname = $_GET['lastname'];
-$salary = $_GET['salary'];
-$email = $_GET['email'];
+$username = $_REQUEST['username'];
+$password = $_REQUEST['password'];
+$firstname = $_REQUEST['firstname'];
+$lastname = $_REQUEST['lastname'];
+$salary = $_REQUEST['salary'];
+$email = $_REQUEST['email'];
 
 // Build query
 $query = "INSERT INTO employees (username, password, firstname, lastname, salary, email) VALUES ('$username', MD5('$password'), '$firstname', '$lastname', '$salary', '$email')";

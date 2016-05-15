@@ -5,18 +5,15 @@ $password = "YayWebuser16!";
 $dbname = "company";
 
 // Connect to MySQL server
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if(!$conn) {
 	exit('<p>Connection to MySQL database server failed: </p>' . mysqli_connect_error());
 }
 
-// Select database
-mysqli_select_db($conn, $dbname);
-
 // Retrieve data from query string
-$user = $_GET['username'];
-$pass = $_GET['password'];
+$user = $_REQUEST['username'];
+$pass = $_REQUEST['password'];
 
 // Build query
 $query = "SELECT id, firstname, lastname, salary, email FROM employees WHERE username='$user' AND password=MD5('$pass')";
