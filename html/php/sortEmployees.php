@@ -33,7 +33,7 @@ if($result = mysqli_query($conn, $query)) {
 				$disp .= "<td>" . $row['username'] . "</td>";
 				$disp .= "<td>" . $row['firstname'] . "</td>";
 				$disp .= "<td>" . $row['lastname'] . "</td>";
-				$disp .= "<td>$" . $row['salary'] . "</td>";
+				$disp .= "<td align=\"right\">$" . $row['salary'] . "</td>";
 				$disp .= "<td>" . $row['email'] . "</td>";
 			$disp .= "</tr>";
 		}

@@ -45,7 +45,7 @@
 					echo "<td>" . $row['username'] . "</td>";
 					echo "<td>" . $row['firstname'] . "</td>";
 					echo "<td>" . $row['lastname'] . "</td>";
-					echo "<td>$" . $row['salary'] . "</td>";
+					echo "<td align=\"right\">$" . $row['salary'] . "</td>";
 					echo "<td>" . $row['email'] . "</td>";
 				echo "</tr>";
 			}

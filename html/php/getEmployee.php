@@ -35,11 +35,11 @@ if($result = mysqli_query($conn, $query)) {
 		// Insert a new row in the table for each database row returned
 		while($row = mysqli_fetch_array($result)) {
 			$disp .= "<tr>";
-			$disp .= "<td>$row[id]</td>";
-			$disp .= "<td>$row[firstname]</td>";
-			$disp .= "<td>$row[lastname]</td>";
-			$disp .= "<td>$row[salary]</td>";
-			$disp .= "<td>$row[email]</td>";
+			$disp .= "<td>" . $row[id] . "</td>";
+			$disp .= "<td>" . $row[firstname] . "</td>";
+			$disp .= "<td>" . $row[lastname] . "</td>";
+			$disp .= "<td align=\"right\">$" . $row[salary] . "</td>";
+			$disp .= "<td>" . $row[email] . "</td>";
 			$disp .= "</tr>";
 		}
 	} else {
