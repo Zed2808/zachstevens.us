@@ -3,7 +3,7 @@
 	src: url('/fonts/DroidSans.ttf');
 }
 
-html {
+body {
 	font-family: 'DroidSans';
 }
 

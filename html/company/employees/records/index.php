@@ -2,12 +2,12 @@
 <html>
 <head>
 	<title>Employee records</title>
-	<link rel="stylesheet" type="text/css" href="/styles.css">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<script type="text/javascript" src="/jquery/jquery-2.2.3.min.js"></script>
 	<script type="text/javascript" src="/js/scripts.js"></script>
 </head>
 <body>
-	<a href="/index.html">Home</a>
+	<a href="/company/index.html">Home</a>
 
 	<h1>Employee records</h1>
 
