@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 </head>
 <body>
-	<a href="/company/index.html">Home</a>
+	<a class="topLink" href="/company/index.html">Home</a>
 
 	<h1>Shop</h1>
 
@@ -35,7 +35,7 @@
 		if(mysqli_num_rows($result) > 0) {
 
 			// Create an HTML table with headers for each field in our DB
-			echo "<table border=\"1\" cellpadding=\"3\">";
+			echo "<table class=\"dataTable\" cellpadding=\"5\">";
 				echo "<tr>";
 					echo "<th>Item</th>";
 					echo "<th>Price</th>";

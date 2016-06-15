@@ -3,11 +3,56 @@
 	src: url('/fonts/DroidSans.ttf');
 }
 
+@font-face {
+	font-family: 'Oswald';
+	src: url('/fonts/Oswald-Light.ttf');
+}
+
 body {
 	font-family: 'DroidSans';
+	background: #202020;
+	color: #EEEEEE;
+}
+
+h1 {
+	font-family: 'Oswald';
+	font-size: 300%;
+}
+
+a {
+	font-family: 'Oswald';
+	font-size: 200%;
+	color: #EEEEEE;
+	text-decoration: none;
+}
+
+.homeBody {
+	text-align: center;
+	background: #202020;
+}
+
+.dataTable tr:nth-child(odd) {
+	background-color: #303030;
+}
+
+.dataTable tr:nth-child(even) {
+	background-color: #404040;
+}
+
+.tdLink {
+	background: #404040;
+	box-shadow: 0px 3px 0px #705070;
+}
+
+.topLink {
+	background: #404040;
+	box-shadow: 0px 3px 0px #705070;
+	padding: 0px 10px;
 }
 
 .sortButton {
+	background: #404040;
+	color: #EEEEEE;
 	border: 0;
 	padding: 0;
 	margin: 0;

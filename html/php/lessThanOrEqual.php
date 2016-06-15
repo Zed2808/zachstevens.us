@@ -21,7 +21,7 @@ $query = "SELECT * FROM shop WHERE stock <= '$stock'";
 if($result = mysqli_query($conn, $query)) {
 	if(mysqli_num_rows($result) > 0) {
 		// Build result string
-		$display_string = "<table border=\"1\" cellpadding=\"3\">";
+		$display_string = "<table class=\"dataTable\" cellpadding=\"5\">";
 		$display_string .= "<tr>";
 		$display_string .= "<th>Item</th>";
 		$display_string .= "<th>Price</th>";

@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="/js/scripts.js"></script>
 </head>
 <body>
-	<a href="/company/index.html">Home</a>
+	<a class="topLink" href="/company/index.html">Home</a>
 
 	<h1>Employee records</h1>
 
@@ -29,7 +29,7 @@
 
 	if($result = mysqli_query($conn, $query)) {
 		if(mysqli_num_rows($result) > 0) {
-			echo "<table border=\"1\" cellpadding=\"3\">";
+			echo "<table class=\"dataTable\" cellpadding=\"5\">";
 				echo "<tr>";
 					echo "<th>ID <input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('id', 'ASC')\" value=\"↓\"/><input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('id', 'DESC')\" value=\"↑\"/></th>";
 					echo "<th>Username <input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('username', 'ASC')\" value=\"↓\"/><input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('username', 'DESC')\" value=\"↑\"/></th>";
