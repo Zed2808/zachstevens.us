@@ -17,7 +17,7 @@ $query = "SELECT id, username, firstname, lastname, salary, email FROM employees
 
 if($result = mysqli_query($conn, $query)) {
 	if(mysqli_num_rows($result) > 0) {
-		$disp = "<table border=\"1\" cellpadding=\"3\">";
+		$disp = "<table class=\"dataTable\" cellpadding=\"5\">";
 			$disp .= "<tr>";
 				$disp .= "<th>ID <input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('id', 'ASC')\" value=\"↓\"/><input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('id', 'DESC')\" value=\"↑\"/></th>";
 				$disp .= "<th>Username <input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('username', 'ASC')\" value=\"↓\"/><input class=\"sortButton\" type=\"button\" onclick=\"sortEmployees('username', 'DESC')\" value=\"↑\"/></th>";
